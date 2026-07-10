@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whisky – Caledonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    .whisky-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .whisky-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .whisky-card:hover {
+      box-shadow: 0 4px 20px rgba(61, 43, 74, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .whisky-header {
+      background: var(--heather);
+      padding: 1.25rem 1.5rem;
+      position: relative;
+    }
+
+    .whisky-region {
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.3rem;
+    }
+
+    .whisky-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--oatmeal);
+      line-height: 1.2;
+    }
+
+    .whisky-age {
+      font-family: var(--font-ui);
+      font-size: 0.75rem;
+      color: var(--oatmeal);
+      opacity: 0.6;
+      margin-top: 0.25rem;
+    }
+
+    .whisky-body {
+      padding: 1.25rem 1.5rem;
+    }
+
+    .tasting-row {
+      margin-bottom: 0.75rem;
+    }
+
+    .tasting-label {
+      font-family: var(--font-ui);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.15rem;
+    }
+
+    .tasting-note {
+      font-size: 0.88rem;
+      color: #444;
+      line-height: 1.55;
+      font-family: var(--font-body);
+      font-style: italic;
+    }
+
+    .whisky-bottle-placeholder {
+      width: 64px;
+      height: 64px;
+      background: rgba(255,255,255,0.1);
+      border: 2px dashed rgba(201, 169, 110, 0.4);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0.85rem;
+      transition: background 0.2s;
+      overflow: hidden;
+    }
+
+    .whisky-bottle-placeholder:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .whisky-bottle-placeholder span {
+      font-size: 1.6rem;
+      opacity: 0.5;
+    }
+
+    .whisky-bottle-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .whisky-peat {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.75rem;
+      font-family: var(--font-ui);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--slate);
+    }
+
+    .peat-dots {
+      display: flex;
+      gap: 3px;
+    }
+
+    .peat-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+
+    .peat-dot.filled {
+      background: var(--heather);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="photos.html" class="nav-link">Photos</a>
+      <a href="whisky.html" class="nav-link active">Whisky</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="index.html" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+
+    <h1 class="page-heading">Ken's Whiskies</h1>
+    <p class="page-intro">A personal selection. Heavily weighted towards Islay, which says everything you need to know.</p>
+
+    <div class="whisky-grid">
+
+      <!-- Caol Ila -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Caol Ila</div>
+          <div class="whisky-age">12 Year Old · 43% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Lemon peel, green apple, sea salt, and delicate wisps of peat smoke. Coastal and fresh.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Vanilla, flaky sea salt, tart fruit, and coastal peat smoke. Elegant rather than aggressive.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Sweet smoke, driftwood, and lingering lemon peel. Long and satisfying.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bunnahabhain -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Bunnahabhain</div>
+          <div class="whisky-age">12 Year Old · 46.3% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Dark fruits, raisins, sweet vanilla, roasted walnuts, and a gentle coastal influence. Rich and inviting.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Oily and chewy. Dried fruits and nuts, charred driftwood, seaweed, and a touch of brine. Unusually unpeated for Islay.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Salted almonds, walnuts, and a subtle hint of liquorice. Long and full-bodied.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lagavulin -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Lagavulin</div>
+          <div class="whisky-age">16 Year Old · 43% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Deep, elegant smoke with layers of sherry, dried fruit, and dark chocolate. A slow, contemplative nose.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Rounder and deeper than most Islays. Rich peat, oak, vanilla, and dark fruit. Complex and unhurried.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Very long. Smoke, spice, and a warming sweetness that stays and stays.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bowmore -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Bowmore</div>
+          <div class="whisky-age">12 Year Old · 40% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Smoke and sea, with a characteristic floral and honey sweetness underneath. The most balanced of the Islay distilleries.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Gentle peat, dark chocolate, dried fruits, and a distinctive lavender note. Neither too sweet nor too smoky.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Medium length. Smoke fades to leave dark fruit and a pleasant bitterness.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dalwhinnie -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Highland</div>
+          <div class="whisky-name">Dalwhinnie</div>
+          <div class="whisky-age">15 Year Old · 43% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Heather honey, vanilla, and gentle floral notes. The highest distillery in Scotland, and it tastes like it.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Soft and easy. Honey, dried fruit, and a light cereal sweetness. The odd one out in this collection - and none the worse for it.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Long and gentle. Heather and honey with a warming spice at the end.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Macallan -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Speyside</div>
+          <div class="whisky-name">Macallan</div>
+          <div class="whisky-age">12 Year Old Sherry Oak · 40% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Dried fruits, rich sherry, ginger, and orange peel. The benchmark sherried Speyside.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Full-bodied and rich. Dark chocolate, toffee, raisins, and clove. No peat whatsoever - a complete contrast to the rest of this list.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Long and warming. Spiced oak and dried fruit linger pleasantly.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ardbeg -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Ardbeg</div>
+          <div class="whisky-age">10 Year Old · 46% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Dense, dark smoke, sharp citrus, and a tarry edge. Not subtle. Not trying to be.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">A direct punch of peat, ash, citrus oils, and pepper. Compact and powerful, with a salty thread that keeps it dry and precise.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Long and dry. Citrus peel, ash, and a slightly oily smoke that refuses to leave.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Talisker -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Isle of Skye</div>
+          <div class="whisky-name">Talisker</div>
+          <div class="whisky-age">10 Year Old · 45.8% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Peat and pepper, with coastal brine, a hint of vanilla, and faint plum. Briny and expectedly maritime.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Warming and peppery with a distinctive sea-air minerality. Peaty but approachable - the gentler side of island whisky.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Long and peppery. The smoke and salt linger in equal measure. Robert Louis Stevenson approved.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot"></div>
+              <div class="peat-dot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Laphroaig -->
+      <div class="whisky-card">
+        <div class="whisky-header">
+          <div class="whisky-region">Islay</div>
+          <div class="whisky-name">Laphroaig</div>
+          <div class="whisky-age">10 Year Old · 40% ABV</div>
+        </div>
+          <div class="whisky-bottle-placeholder">
+            <span>🥃</span>
+          </div>
+        </div>
+        <div class="whisky-body">
+          <div class="tasting-row">
+            <div class="tasting-label">Nose</div>
+            <div class="tasting-note">Medicinal, iodine-led, and intensely smoky. Seaweed, TCP, and a surprising sweetness underneath. Polarising in the best possible way.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Palate</div>
+            <div class="tasting-note">Salty, coastal, and deeply peaty. The medicinal character takes hold immediately. You either love it or you don't.</div>
+          </div>
+          <div class="tasting-row">
+            <div class="tasting-label">Finish</div>
+            <div class="tasting-note">Very long. Peat, iodine, and a lingering sweetness. The finish outlasts the conversation.</div>
+          </div>
+          <div class="whisky-peat">
+            <span>Peat</span>
+            <div class="peat-dots">
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+              <div class="peat-dot filled"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken Gray &amp; Dana Beer &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
