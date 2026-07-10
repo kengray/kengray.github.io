@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belgium Beer! – Caledonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .photo-link img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      transition: opacity 0.2s;
+    }
+    .photo-link:hover img { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../about.html" class="nav-link">About</a>
+      <a href="../../photos.html" class="nav-link active">Photos</a>
+      <a href="../../contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="../../index.html" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <a href="../../photos.html" style="font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate);">← All albums</a>
+    <h1 class="page-heading" style="margin-top: 0.75rem;">Belgium Beer!</h1>
+    <p class="page-intro">March 2004 &nbsp;&middot;&nbsp; 14 photos</p>
+
+    <div class="photo-grid">
+      
+      <a href="images/P1010185.JPG" class="photo-link" target="_blank">
+        <img src="images/P1010185.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060186.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060186.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060187.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060187.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060188.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060188.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060190.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060190.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060191.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060191.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060193.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060193.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060196.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060196.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060197.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060197.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060200.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060200.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060201.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060201.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060203.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060203.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060204.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060204.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+      <a href="images/P3060206.JPG" class="photo-link" target="_blank">
+        <img src="images/P3060206.JPG" alt="Belgium Beer!" loading="lazy">
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken &amp; Dana Gray &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
