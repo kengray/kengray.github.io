@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Caledonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="photos.html" class="nav-link">Photos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="index.html" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+
+    <h1 class="page-heading">About Us</h1>
+
+    <div class="prose">
+      <p>We're Ken and Dana, based in Bavaria. Ken has been putting off updating this website since approximately 2004, and Dana has been remarkably patient about it.</p>
+
+      <p>This site is our low-key corner of the internet - a place for photos, occasional updates, and proof that we do occasionally leave the house.</p>
+
+      <p><em>This page is a placeholder - fill it in with whatever you'd like people to know about you both.</em></p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken &amp; Dana Gray &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

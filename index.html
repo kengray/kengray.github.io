@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caledonia – Ken & Dana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="photos.html" class="nav-link">Photos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Caledonia</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-subtitle">Ken &amp; Dana's corner of the web</p>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="intro">
+      <p>Hello and welcome. We've had this little patch of the internet for a while now, and it seemed about time to tidy it up. Pull up a chair.</p>
+    </section>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-icon">&#9788;</div>
+        <h2 class="card-title">About Us</h2>
+        <p class="card-body">A little about who we are, where we've been, and what we get up to. Updated sporadically, as is traditional.</p>
+        <a href="about.html" class="card-link">Read more</a>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">&#9724;</div>
+        <h2 class="card-title">Photos</h2>
+        <p class="card-body">Albums from over the years - skiing, celebrations, travels, and the odd gathering that got slightly out of hand.</p>
+        <a href="photos.html" class="card-link">Browse the albums</a>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">&#9993;</div>
+        <h2 class="card-title">Get in Touch</h2>
+        <p class="card-body">If you've found your way here, you probably already know how to reach us. But just in case.</p>
+        <a href="contact.html" class="card-link">Contact us</a>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken &amp; Dana Gray &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Caledonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="photos.html" class="nav-link">Photos</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="index.html" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+
+    <h1 class="page-heading">Get in Touch</h1>
+
+    <div class="prose">
+      <p>The best way to reach us is by email. We check it occasionally, which is more than can be said for voicemail.</p>
+
+      <p class="contact-email"><a href="mailto:ken@grayscot.com">ken@grayscot.com</a></p>
+
+      <p>We're also findable on the usual social platforms, for those who prefer shouting into the void collectively.</p>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken &amp; Dana Gray &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
