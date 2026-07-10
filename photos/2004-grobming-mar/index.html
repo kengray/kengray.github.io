@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grobming (March) – Caledonia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    .photo-link img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+      transition: opacity 0.2s;
+    }
+    .photo-link:hover img { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="../../index.html" class="nav-link">Home</a>
+      <a href="../../about.html" class="nav-link">About</a>
+      <a href="../../photos.html" class="nav-link active">Photos</a>
+      <a href="../../contact.html" class="nav-link">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="../../index.html" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <a href="../../photos.html" style="font-family: var(--font-ui); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate);">← All albums</a>
+    <h1 class="page-heading" style="margin-top: 0.75rem;">Grobming (March)</h1>
+    <p class="page-intro">March 2004 &nbsp;&middot;&nbsp; 13 photos</p>
+
+    <div class="photo-grid">
+      
+      <a href="images/P3130207.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130207.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3130209.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130209.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3130211.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130211.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3130214.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130214.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3130215.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130215.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3130216.JPG" class="photo-link" target="_blank">
+        <img src="images/P3130216.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140218.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140218.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140219.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140219.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140220.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140220.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140221.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140221.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140223.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140223.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140224.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140224.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+      <a href="images/P3140226.JPG" class="photo-link" target="_blank">
+        <img src="images/P3140226.JPG" alt="Grobming (March)" loading="lazy">
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken &amp; Dana Gray &nbsp;&middot;&nbsp; grayscot.com</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
