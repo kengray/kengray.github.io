@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dana — Quilting, Knitting &amp; Sweet Lies and Lullabies</title>
+<title>Dana — Fibre Crafts &amp; Sweet Lies and Lullabies</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
@@ -199,6 +199,45 @@
     .craft-text{ grid-template-columns: 1fr; }
   }
 
+  .craft-group{ margin-bottom: 3rem; }
+  .craft-group:last-child{ margin-bottom: 0; }
+  .craft-group h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+  .craft-group .patchwork{ margin-bottom: 1rem; }
+  .craft-group p{ max-width: 640px; }
+
+  .violin-feature{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .violin-feature img{
+    width: 320px;
+    max-width: 100%;
+    border: 2px solid var(--ink);
+    clip-path: polygon(0 4%, 4% 0, 96% 0, 100% 4%, 100% 96%, 96% 100%, 4% 100%, 0 96%);
+  }
+  .violin-feature p{ flex: 1; min-width: 240px; }
+
+  /* ---- bio photo ---- */
+  .bio-photo{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--berry);
+    margin: 1.75rem auto 0.5rem;
+  }
+  .bio-caption{
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: var(--ink);
+    text-align: center;
+  }
+
   /* ---- music section ---- */
   .music{
     background: var(--indigo-deep);
@@ -329,10 +368,13 @@
   <span class="tagline">piecing quilts, knitting rows, picking tunes</span>
   <h1>Dana</h1>
   <p class="intro">
-    Quilter, knitter and one half of the harmonies in Sweet Lies and Lullabies.
-    Most of what I make starts the same way: a good pattern, a bit of patience,
-    and someone nearby playing a banjo.
+    Quilter, crocheter, weaver, occasional spinner, and one half of the
+    harmonies in Sweet Lies and Lullabies. Most of what I make starts the
+    same way: a good pattern, a bit of patience, and someone nearby playing
+    a banjo.
   </p>
+  <img src="images/ken-dana.jpg" alt="Dana and Ken" class="bio-photo">
+  <p class="bio-caption">Dana &amp; Ken</p>
   <div class="ctas">
     <a href="#crafts" class="btn solid">See the crafts</a>
     <a href="#music" class="btn line">Meet the band</a>
@@ -344,36 +386,70 @@
 <section class="crafts" id="crafts">
   <div class="section-inner">
     <div class="section-head">
-      <span class="eyebrow">needle &amp; thread</span>
-      <h2>Quilting &amp; knitting</h2>
+      <span class="eyebrow">needle, hook &amp; wheel</span>
+      <h2>Quilting, crochet &amp; weaving</h2>
     </div>
 
-    <!-- Replace each .patch background-color with background-image: url('photo.jpg') once real photos are ready -->
-    <div class="patchwork">
-      <div class="patch p1"><span>Quilt in progress</span></div>
-      <div class="patch p2"><span>Finished lap quilt</span></div>
-      <div class="patch p3"><span>Hand-knit socks</span></div>
-      <div class="patch p4"><span>Colourwork jumper</span></div>
-      <div class="patch p5"><span>Fabric stash</span></div>
-      <div class="patch p6"><span>Works in progress</span></div>
-    </div>
-
-    <div class="craft-text">
-      <div>
-        <h3 style="font-size:1.3rem; margin-bottom:0.6rem;">Quilting</h3>
-        <p>
-          I like the slow arithmetic of it: cutting fabric into small honest
-          shapes and sewing them back into something bigger than they were.
-          Most projects are pieced by machine and finished by hand, which
-          means there's always one quilt on the go and one on the frame.
-        </p>
+    <div class="craft-group">
+      <h3>Quilting</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/quilt-star.jpg')"><span>Star sampler quilt</span></div>
+        <div class="patch" style="background-image:url('images/crafts/quilt-rwb.jpg')"><span>Red, white &amp; blue quilt</span></div>
       </div>
-      <div>
-        <h3 style="font-size:1.3rem; margin-bottom:0.6rem;">Knitting</h3>
+      <p>
+        I like the slow arithmetic of it: cutting fabric into small honest
+        shapes and sewing them back into something bigger than they were.
+        Most projects are pieced by machine and finished by hand, which
+        means there's always one quilt on the go and one on the frame.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>Crochet</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/crochet-logcabin.jpg')"><span>Log cabin blanket</span></div>
+        <div class="patch" style="background-image:url('images/crafts/crochet-squares.jpg')"><span>Granny squares</span></div>
+        <div class="patch" style="background-image:url('images/crafts/crochet-wip.jpg')"><span>Work in progress</span></div>
+      </div>
+      <p>
+        The most portable of the lot - a hook, a ball of yarn, and a granny
+        square grows anywhere: festival fields included. Replace this
+        paragraph with your own take on what draws you to it.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>Weaving</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/weaving-scarf.jpg')"><span>Woven tartan scarf</span></div>
+        <div class="patch" style="background-image:url('images/crafts/weaving-loom.jpg')"><span>On the loom</span></div>
+      </div>
+      <p>
+        Slower again, and unforgiving of mistakes - every thread's committed
+        the moment it's warped onto the loom. Replace this paragraph with
+        the story behind your loom, or your favourite finished piece.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>Spinning</h3>
+      <div class="patchwork" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="patch" style="background-image:url('images/crafts/spinning-wheel.jpg')"><span>The spinning wheel</span></div>
+      </div>
+      <p>
+        Where the yarn starts, before any of the above. Replace this
+        paragraph with what you spin, and what it tends to become.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>And the odd side project</h3>
+      <div class="violin-feature">
+        <img src="images/crafts/violin.jpg" alt="Decoupaged violin, decorated with a floral pattern">
         <p>
-          Socks for portability, jumpers for stubbornness. I'll happily carry
-          a sock in progress to a festival field and knit a few rows between
-          sets, which is roughly how most of my favourite pairs got finished.
+          Not every project fits neatly into quilting, crochet or weaving -
+          this decoupaged violin is proof. Replace this with the story of
+          how it came about.
         </p>
       </div>
     </div>
@@ -425,6 +501,15 @@
           <h4>Upcoming shows</h4>
           <p class="placeholder-note">Add dates as they're booked, e.g. "12 Sept - The Fiddler's Rest, Edinburgh".</p>
         </div>
+        <div class="listen-box">
+          <h4>Press</h4>
+          <p style="font-size:0.9rem;">
+            Featured in the Mittelbayerische's write-up of Langquaid's Offene
+            Bühne (15 January 2026), which singled the trio out among the
+            evening's highlights for their close harmonies, original songs
+            and warm country-folk sound.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -461,7 +546,7 @@
     <a href="#">Instagram</a>
     <a href="#">Bandcamp</a>
   </div>
-  <p class="fine">Dana &middot; built with a needle in one hand and a plectrum in the other &middot; v1.3</p>
+  <p class="fine">Dana &middot; built with a needle in one hand and a plectrum in the other &middot; v1.4</p>
 </footer>
 
 </body>
