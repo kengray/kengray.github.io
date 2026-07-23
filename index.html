@@ -1,78 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caledonia – Ken & Dana</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <script data-goatcounter="https://caledonia.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dana — Fibre Crafts &amp; Sweet Lies and Lullabies</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #221d17;
+    --cream: #f6efe1;
+    --cream-deep: #eadfc4;
+    --indigo: #2c3a55;
+    --indigo-deep: #1b2438;
+    --berry: #9c3b3b;
+    --gold: #c69a2f;
+    --seam: repeating-linear-gradient(to bottom, var(--berry) 0 10px, transparent 10px 20px);
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Karla', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  h1, h2, h3{
+    font-family: 'Fraunces', serif;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .eyebrow{
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--berry);
+    display: block;
+    margin-bottom: 0.25rem;
+    transform: rotate(-1.5deg);
+  }
+  a{ color: inherit; }
+  img{ max-width: 100%; display:block; }
+
+  /* ---- pinked-edge zigzag divider, the site's signature motif ---- */
+  .zigzag{
+    width: 100%;
+    height: 18px;
+    line-height: 0;
+  }
+  .zigzag svg{ width: 100%; height: 18px; display:block; }
+  .zigzag.flip{ transform: scaleY(-1); }
+
+  /* ---- nav: styled like sewn-on fabric tabs ---- */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--cream);
+    border-bottom: 3px solid var(--ink);
+  }
+  nav{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.5rem;
+  }
+  .brandmark{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  .tabs{
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .tabs a{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    background: var(--cream-deep);
+    padding: 0.5rem 0.9rem 0.4rem;
+    border: 2px solid var(--ink);
+    border-bottom: none;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 4% 100%);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .tabs a:hover{ background: var(--gold); transform: translateY(-2px); }
+
+  section{ position: relative; }
+
+  /* ---- hero ---- */
+  .hero{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 3.5rem;
+    text-align: center;
+  }
+  .hero h1{
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    font-weight: 700;
+  }
+  .hero .tagline{
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    color: var(--berry);
+    margin-top: 0.5rem;
+    transform: rotate(-1deg);
+  }
+  .hero p.intro{
+    max-width: 560px;
+    margin: 1.5rem auto 0;
+    font-size: 1.05rem;
+  }
+  .hero .ctas{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1.4rem;
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+  .btn.solid{ background: var(--ink); color: var(--cream); }
+  .btn.solid:hover{ background: var(--berry); border-color: var(--berry); }
+  .btn.line:hover{ background: var(--ink); color: var(--cream); }
+
+  /* ---- crafts section ---- */
+  .crafts{
+    background: var(--cream-deep);
+    padding: 4rem 1.5rem 4.5rem;
+  }
+  .section-inner{ max-width: 1000px; margin: 0 auto; }
+  .section-head{ margin-bottom: 2.5rem; }
+  .section-head h2{ font-size: clamp(2.1rem, 5vw, 3rem); font-weight: 700; }
+
+  .patchwork{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .patch{
+    aspect-ratio: 1;
+    border: 2px solid var(--ink);
+    clip-path: polygon(
+      0 4%, 4% 0, 96% 0, 100% 4%,
+      100% 96%, 96% 100%, 4% 100%, 0 96%
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--cream);
+    background-size: cover;
+    background-position: center;
+  }
+  .patch span{
+    background: rgba(34,29,23,0.55);
+    padding: 0.2rem 0.5rem;
+  }
+  .patch.p1{ background-color: var(--indigo); }
+  .patch.p2{ background-color: var(--berry); }
+  .patch.p3{ background-color: var(--gold); }
+  .patch.p4{ background-color: #5c6e4f; }
+  .patch.p5{ background-color: #7a4a2e; }
+  .patch.p6{ background-color: var(--indigo-deep); }
+  /* Replace a patch's background-color with background-image: url('your-photo.jpg') to swap in a real photo */
+
+  .craft-text{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  @media (max-width: 700px){
+    .patchwork{ grid-template-columns: repeat(2, 1fr); }
+    .craft-text{ grid-template-columns: 1fr; }
+  }
+
+  .craft-group{ margin-bottom: 3rem; }
+  .craft-group:last-child{ margin-bottom: 0; }
+  .craft-group h3{
+    font-size: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+  .craft-group .patchwork{ margin-bottom: 1rem; }
+  .craft-group p{ max-width: 640px; }
+
+  .violin-feature{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .violin-feature img{
+    width: 320px;
+    max-width: 100%;
+    border: 2px solid var(--ink);
+    clip-path: polygon(0 4%, 4% 0, 96% 0, 100% 4%, 100% 96%, 96% 100%, 4% 100%, 0 96%);
+  }
+  .violin-feature p{ flex: 1; min-width: 240px; }
+
+  /* ---- bio photo ---- */
+  .bio-photo{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--berry);
+    margin: 1.75rem auto 0.5rem;
+  }
+  .bio-caption{
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  /* ---- music section ---- */
+  .music{
+    background: var(--indigo-deep);
+    color: var(--cream);
+    padding: 4.5rem 1.5rem 4.5rem;
+  }
+  .music .eyebrow{ color: var(--gold); }
+  .music .section-head h2{ color: var(--cream); }
+  .band-poster{
+    border: 3px solid var(--gold);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+  .band-poster h3{
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1.05;
+  }
+  .band-poster .sub{
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    margin-top: 0.4rem;
+  }
+  .band-grid{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+  @media (max-width: 700px){ .band-grid{ grid-template-columns: 1fr; } }
+
+  .lineup{ list-style: none; margin: 1rem 0 0; padding: 0; }
+  .lineup li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(246,239,225,0.35);
+    padding: 0.55rem 0;
+    font-size: 0.95rem;
+  }
+  .lineup li span:last-child{ color: var(--gold); font-weight: 700; }
+
+  .listen-box, .shows-box{
+    border: 2px solid rgba(246,239,225,0.4);
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .listen-box h4, .shows-box h4{
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    color: var(--gold);
+  }
+  .placeholder-note{
+    font-size: 0.82rem;
+    color: rgba(246,239,225,0.6);
+    font-style: italic;
+  }
+
+  /* ---- bluegrass section ---- */
+  .bluegrass{
+    background: var(--cream);
+    padding: 4.5rem 1.5rem 4.5rem;
+  }
+  .quote{
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+    max-width: 700px;
+    line-height: 1.4;
+    border-left: 4px solid var(--berry);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  /* ---- footer ---- */
+  footer{
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+  }
+  footer h2{ font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .social{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .social a{
+    text-decoration: none;
+    border: 2px solid var(--cream);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  .social a:hover{ background: var(--cream); color: var(--ink); }
+  footer .fine{
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    color: rgba(246,239,225,0.5);
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+  }
+</style>
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="nav">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="photos.html" class="nav-link">Photos</a>
-      <a href="whisky.html" class="nav-link">Whisky</a>
-      <a href="dana/index.html" class="nav-link">Dana</a>
-      <a href="learn.html" class="nav-link">Learn</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
+<header>
+  <nav>
+    <span class="brandmark">Dana</span>
+    <ul class="tabs">
+      <li><a href="#crafts">Crafts</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#bluegrass">Bluegrass</a></li>
+      <li><a href="#contact">Say hello</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="hero">
-      <p class="hero-eyebrow">Welcome to</p>
-      <h1 class="hero-title">Caledonia</h1>
-      <div class="hero-rule"></div>
-      <p class="hero-subtitle">Ken Gray &amp; Dana Beer's corner of the web</p>
-    </div>
-  </header>
+<section class="hero">
+  <span class="tagline">piecing quilts, knitting rows, picking tunes</span>
+  <h1>Dana</h1>
+  <p class="intro">
+    Quilter, crocheter, weaver, occasional spinner, and one half of the
+    harmonies in Sweet Lies and Lullabies. Most of what I make starts the
+    same way: a good pattern, a bit of patience, and someone nearby playing
+    a banjo.
+  </p>
+  <img src="images/ken-dana.jpg" alt="Dana and Ken" class="bio-photo">
+  <p class="bio-caption">Dana &amp; Ken</p>
+  <div class="ctas">
+    <a href="#crafts" class="btn solid">See the crafts</a>
+    <a href="#music" class="btn line">Meet the band</a>
+  </div>
+</section>
 
-  <main class="main">
+<div class="zigzag"><svg preserveAspectRatio="none" viewBox="0 0 200 18"><polygon points="0,0 10,18 20,0 30,18 40,0 50,18 60,0 70,18 80,0 90,18 100,0 110,18 120,0 130,18 140,0 150,18 160,0 170,18 180,0 190,18 200,0 200,18 0,18" fill="#221d17"/></svg></div>
 
-    <section class="intro">
-      <p>Hello and welcome. We've had this little patch of the internet for a while now, and it seemed about time to tidy it up. Pull up a chair.</p>
-    </section>
-
-    <div class="cards">
-
-      <article class="card">
-        <div class="card-icon">&#9788;</div>
-        <h2 class="card-title">About Us</h2>
-        <p class="card-body">A little about who we are, where we've been, and what we get up to. Updated sporadically, as is traditional.</p>
-        <a href="about.html" class="card-link">Read more</a>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">&#9724;</div>
-        <h2 class="card-title">Photos</h2>
-        <p class="card-body">Albums from over the years - skiing, celebrations, travels, and the odd gathering that got slightly out of hand.</p>
-        <a href="photos.html" class="card-link">Browse the albums</a>
-      </article>
-
-      <article class="card">
-        <div class="card-icon">&#9993;</div>
-        <h2 class="card-title">Get in Touch</h2>
-        <p class="card-body">If you've found your way here, you probably already know how to reach us. But just in case.</p>
-        <a href="contact.html" class="card-link">Contact us</a>
-      </article>
-
+<section class="crafts" id="crafts">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">needle, hook &amp; wheel</span>
+      <h2>Quilting, crochet &amp; weaving</h2>
     </div>
 
-  </main>
+    <div class="craft-group">
+      <h3>Quilting</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/quilt-star.jpg')"><span>Star sampler quilt</span></div>
+        <div class="patch" style="background-image:url('images/crafts/quilt-rwb.jpg')"><span>Red, white &amp; blue quilt</span></div>
+        <div class="patch" style="background-image:url('images/crafts/quilt-piecing.jpg')"><span>Piecing in progress</span></div>
+      </div>
+      <p>
+        I like the slow arithmetic of it: cutting fabric into small honest
+        shapes and sewing them back into something bigger than they were.
+        Most projects are pieced by machine and finished by hand, which
+        means there's always one quilt on the go and one on the frame.
+      </p>
+    </div>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Ken Gray &amp; Dana Beer &nbsp;&middot;&nbsp; grayscot.com &nbsp;&middot;&nbsp; v2.0</p>
-  </footer>
+    <div class="craft-group">
+      <h3>Crochet</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/crochet-logcabin.jpg')"><span>Log cabin blanket</span></div>
+        <div class="patch" style="background-image:url('images/crafts/crochet-squares.jpg')"><span>Granny squares</span></div>
+        <div class="patch" style="background-image:url('images/crafts/crochet-wip.jpg')"><span>Work in progress</span></div>
+        <div class="patch" style="background-image:url('images/crafts/crochet-vest.jpg')"><span>Freeform crochet vest</span></div>
+      </div>
+      <p>
+        The most portable of the lot - a hook, a ball of yarn, and a granny
+        square grows anywhere: festival fields included. Replace this
+        paragraph with your own take on what draws you to it.
+      </p>
+    </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="craft-group">
+      <h3>Weaving</h3>
+      <div class="patchwork">
+        <div class="patch" style="background-image:url('images/crafts/weaving-scarf.jpg')"><span>Woven tartan scarf</span></div>
+        <div class="patch" style="background-image:url('images/crafts/weaving-loom.jpg')"><span>On the loom</span></div>
+      </div>
+      <p>
+        Slower again, and unforgiving of mistakes - every thread's committed
+        the moment it's warped onto the loom. Replace this paragraph with
+        the story behind your loom, or your favourite finished piece.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>Spinning</h3>
+      <div class="patchwork" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="patch" style="background-image:url('images/crafts/spinning-wheel.jpg')"><span>The spinning wheel</span></div>
+        <div class="patch" style="background-image:url('images/crafts/spinning-stash.jpg')"><span>Yarn &amp; fibre stash</span></div>
+      </div>
+      <p>
+        Where the yarn starts, before any of the above. Replace this
+        paragraph with what you spin, and what it tends to become.
+      </p>
+    </div>
+
+    <div class="craft-group">
+      <h3>And the odd side project</h3>
+      <div class="violin-feature">
+        <img src="images/crafts/violin.jpg" alt="Decoupaged violin, decorated with a floral pattern">
+        <p>
+          Not every project fits neatly into quilting, crochet or weaving -
+          this decoupaged violin is proof. Replace this with the story of
+          how it came about.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="zigzag flip"><svg preserveAspectRatio="none" viewBox="0 0 200 18"><polygon points="0,0 10,18 20,0 30,18 40,0 50,18 60,0 70,18 80,0 90,18 100,0 110,18 120,0 130,18 140,0 150,18 160,0 170,18 180,0 190,18 200,0 200,18 0,18" fill="#eadfc4"/></svg></div>
+
+<section class="music" id="music">
+  <div class="section-inner">
+    <span class="eyebrow">stage &amp; strings</span>
+    <div class="section-head">
+      <h2>Sweet Lies and Lullabies</h2>
+    </div>
+
+    <div class="band-poster">
+      <img src="images/sweet-lies-logo.png" alt="Sweet Lies and Lullabies logo" style="max-width: 280px; margin: 0 auto 1rem;">
+      <h3>Sweet Lies and Lullabies</h3>
+      <div class="sub">close harmonies, old tunes, the odd fib</div>
+    </div>
+
+    <img src="images/band-photo.jpg" alt="Dana, Sigi and Ken with Sigi's 1950s car" style="width:100%; border: 3px solid var(--gold); margin-bottom: 2.5rem;">
+
+    <h3 style="color:var(--gold); font-family:'Fraunces',serif; font-size:1.3rem; margin: 0 0 0.9rem;">Dana's Blue Stage</h3>
+    <div class="patchwork" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="patch" style="background-image:url('images/blue-stage.jpg')"><span>The stage itself</span></div>
+      <div class="patch" style="background-image:url('images/rainbow-bench.jpg')"><span>Hand-painted trim</span></div>
+    </div>
+    <p class="placeholder-note" style="margin-bottom: 2.5rem;">Where most of this actually gets rehearsed - built and decorated by hand, right down to the paintwork.</p>
+
+    <div class="band-grid">
+      <div>
+        <p>
+          Double bass, mandolin, guitar and blues harp carry the sound -
+          American roots music, played and sung the way it's meant to be.
+          Dana's own songs sit alongside folk, bluegrass, old-time and
+          country numbers, with harmonies and acoustic instruments telling
+          stories about love, betrayal, life and death.
+        </p>
+        <h4 style="font-family:'Fraunces',serif; color: var(--gold); margin: 1.8rem 0 0.4rem;">Line-up</h4>
+        <ul class="lineup">
+          <li><span>Dana Beer</span><span>voice, guitar, mandolin</span></li>
+          <li><span>Ken Gray</span><span>voice, guitar</span></li>
+          <li><span>Sigi Czerner</span><span>blues harp, tin whistle</span></li>
+          <li><span>double bass</span><span>TBC</span></li>
+        </ul>
+        <p class="placeholder-note" style="margin-top:0.6rem;">Alma's joining on voice and double bass, in as soon as there are decent photos to use.</p>
+      </div>
+
+      <div>
+        <div class="listen-box">
+          <h4>Listen</h4>
+          <p class="placeholder-note">Drop in a Bandcamp, Spotify or YouTube embed here once one's live.</p>
+        </div>
+        <div class="shows-box">
+          <h4>Upcoming shows</h4>
+          <p class="placeholder-note">Add dates as they're booked, e.g. "12 Sept - The Fiddler's Rest, Edinburgh".</p>
+        </div>
+        <div class="shows-box">
+          <h4>Past shows</h4>
+          <ul class="lineup">
+            <li><span>11 Nov 2025</span><span>Neue Welt, Ingolstadt</span></li>
+          </ul>
+        </div>
+        <div class="listen-box">
+          <h4>Press</h4>
+          <p style="font-size:0.9rem;">
+            Featured in the Mittelbayerische's write-up of Langquaid's Offene
+            Bühne (15 January 2026), which singled the trio out among the
+            evening's highlights for their close harmonies, original songs
+            and warm country-folk sound.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bluegrass" id="bluegrass">
+  <div class="section-inner">
+    <span class="eyebrow">the festival life</span>
+    <div class="section-head">
+      <h2>Why bluegrass</h2>
+    </div>
+    <p>
+      I came to bluegrass sideways, through a fiddle tune I couldn't get out
+      of my head and a festival field I didn't want to leave. Every summer
+      now includes a stretch of proper picking, borrowed chairs, and songs
+      that are older than anyone playing them.
+    </p>
+    <div class="quote">
+      "Three chords and the truth, mostly. Occasionally a fourth chord, if
+      someone's feeling ambitious."
+    </div>
+    <p>
+      This is the spot to add your own festival photos, favourite bands
+      you've seen, or a short account of the trips that got you here.
+    </p>
+  </div>
+</section>
+
+<footer id="contact">
+  <h2>Say hello</h2>
+  <p>Commissions, gig enquiries, or just to talk fabric and fiddle tunes.</p>
+  <div class="social">
+    <a href="mailto:dana@example.com">Email</a>
+    <a href="#">Instagram</a>
+    <a href="#">Bandcamp</a>
+  </div>
+  <p class="fine">Dana &middot; built with a needle in one hand and a plectrum in the other &middot; v2.2</p>
+</footer>
 
 </body>
 </html>
