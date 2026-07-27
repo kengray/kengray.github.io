@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} – Caledonia{% else %}Caledonia – Ken & Dana{% endif %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}">
+  {% if page.extra_style %}<style>{{ page.extra_style }}</style>{% endif %}
+  <script data-goatcounter="https://caledonia.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+
+  {% if page.home %}
+  <header class="site-header">
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.home %} active{% endif %}">Home</a>
+      <a href="{{ '/about.html' | relative_url }}" class="nav-link{% if page.url == '/about.html' %} active{% endif %}">About</a>
+      <a href="{{ '/photos.html' | relative_url }}" class="nav-link{% if page.url == '/photos.html' %} active{% endif %}">Photos</a>
+      <a href="{{ '/whisky.html' | relative_url }}" class="nav-link{% if page.url == '/whisky.html' %} active{% endif %}">Whisky</a>
+      <a href="{{ '/dana/' | relative_url }}" class="nav-link">Dana</a>
+      <a href="{{ '/learn.html' | relative_url }}" class="nav-link{% if page.url == '/learn.html' %} active{% endif %}">Learn</a>
+      <a href="{{ '/contact.html' | relative_url }}" class="nav-link{% if page.url == '/contact.html' %} active{% endif %}">Contact</a>
+    </nav>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Caledonia</h1>
+      <div class="hero-rule"></div>
+      <p class="hero-subtitle">Ken Gray &amp; Dana Beer's corner of the web</p>
+    </div>
+  </header>
+  {% else %}
+  <header class="site-header site-header--compact">
+    <nav class="nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link">Home</a>
+      <a href="{{ '/about.html' | relative_url }}" class="nav-link{% if page.url == '/about.html' %} active{% endif %}">About</a>
+      <a href="{{ '/photos.html' | relative_url }}" class="nav-link{% if page.url == '/photos.html' %} active{% endif %}">Photos</a>
+      <a href="{{ '/whisky.html' | relative_url }}" class="nav-link{% if page.url == '/whisky.html' %} active{% endif %}">Whisky</a>
+      <a href="{{ '/dana/' | relative_url }}" class="nav-link">Dana</a>
+      <a href="{{ '/learn.html' | relative_url }}" class="nav-link{% if page.url == '/learn.html' %} active{% endif %}">Learn</a>
+      <a href="{{ '/contact.html' | relative_url }}" class="nav-link{% if page.url == '/contact.html' %} active{% endif %}">Contact</a>
+    </nav>
+    <div class="page-title-block">
+      <a href="{{ '/' | relative_url }}" class="site-name">Caledonia</a>
+      <div class="hero-rule"></div>
+    </div>
+  </header>
+  {% endif %}
+
+  <main class="main{% unless page.home %} main--page{% endunless %}">
+    {% if page.auto_heading %}<h1 class="page-heading">{{ page.heading }}</h1>{% endif %}
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Ken Gray &amp; Dana Beer &nbsp;&middot;&nbsp; grayscot.com &nbsp;&middot;&nbsp; v{{ site.version }}</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
