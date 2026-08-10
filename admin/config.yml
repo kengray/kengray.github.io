@@ -2,7 +2,7 @@ backend:
   name: github
   repo: kengray/kengray.github.io
   branch: main
-  base_url: https://YOUR-CLOUDFLARE-WORKER.workers.dev
+  base_url: https://sveltia-cms-auth.ken-gray.workers.dev
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
