@@ -1,0 +1,163 @@
+backend:
+  name: github
+  repo: kengray/kengray.github.io
+  branch: main
+  base_url: https://YOUR-CLOUDFLARE-WORKER.workers.dev
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - file: index.md
+        label: Home
+        name: home
+        fields:
+          - { label: "Intro text", name: intro, widget: text }
+          - label: Cards
+            name: cards
+            widget: list
+            fields:
+              - { label: Icon (HTML entity), name: icon, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+              - { label: Link, name: link, widget: string }
+              - { label: "Link text", name: link_text, widget: string }
+
+      - file: about.md
+        label: About
+        name: about
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - file: contact.md
+        label: Contact
+        name: contact
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+      - file: learn.md
+        label: Learn
+        name: learn
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: Closing note, name: outro, widget: text }
+          - label: Sections
+            name: sections
+            widget: list
+            fields:
+              - { label: "Section name", name: name, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                fields:
+                  - { label: URL, name: url, widget: string }
+                  - { label: Label, name: label, widget: string }
+                  - { label: Tag, name: tag, widget: string }
+
+      - file: whisky.md
+        label: "Whisky (intro text)"
+        name: whisky_page
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Intro, name: intro, widget: text }
+
+      - file: photos.md
+        label: "Photos (intro text)"
+        name: photos_page
+        fields:
+          - { label: Heading, name: heading, widget: string }
+          - { label: Intro, name: intro, widget: text }
+
+      - file: dana/index.md
+        label: "Dana's page"
+        name: dana
+        fields:
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Intro, name: intro, widget: text }
+          - { label: "Bio photo", name: bio_photo, widget: image }
+          - { label: "Bio caption", name: bio_caption, widget: string }
+          - label: "Craft groups"
+            name: craft_groups
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Text, name: text, widget: text }
+              - label: Patches
+                name: patches
+                widget: list
+                fields:
+                  - { label: Image, name: image, widget: image }
+                  - { label: Caption, name: caption, widget: string }
+          - label: "Side projects"
+            name: side_projects
+            widget: list
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: "Alt text", name: alt, widget: string }
+              - { label: Text, name: text, widget: text }
+          - { label: "Band name", name: band_name, widget: string }
+          - { label: "Band logo", name: band_logo, widget: image }
+          - { label: "Band sub-tagline", name: band_sub, widget: string }
+          - { label: "Band photo", name: band_photo, widget: image }
+          - { label: "Band text", name: band_text, widget: text }
+          - label: Lineup
+            name: lineup
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+          - { label: "Listen note", name: listen_note, widget: string }
+          - { label: "Upcoming shows note", name: shows_upcoming_note, widget: string }
+          - label: "Past shows"
+            name: shows_past
+            widget: list
+            fields:
+              - { label: When, name: when, widget: string }
+              - { label: What, name: what, widget: string }
+          - { label: "Press text", name: press_text, widget: text }
+          - { label: "Other projects text", name: other_projects_text, widget: text }
+          - { label: "Other projects image", name: other_projects_image, widget: image }
+          - { label: "Bluegrass text 1", name: bluegrass_text_1, widget: text }
+          - { label: "Bluegrass quote", name: bluegrass_quote, widget: string }
+          - { label: "Bluegrass text 2", name: bluegrass_text_2, widget: text }
+          - { label: "Contact intro", name: contact_intro, widget: text }
+          - label: "Social links"
+            name: social_links
+            widget: list
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
+
+  - name: whiskies
+    label: Whiskies
+    folder: _whiskies
+    create: true
+    fields:
+      - { label: Order, name: order, widget: number }
+      - { label: Region, name: region, widget: string }
+      - { label: Name, name: name, widget: string }
+      - { label: Age, name: age, widget: string }
+      - { label: ABV, name: abv, widget: string }
+      - { label: "Bottle image (leave blank for placeholder)", name: image, widget: image, required: false }
+      - { label: Nose, name: nose, widget: text }
+      - { label: Palate, name: palate, widget: text }
+      - { label: Finish, name: finish, widget: text }
+      - { label: "Peat level (0-5)", name: peat, widget: number, min: 0, max: 5 }
+
+  - name: albums
+    label: "Photo albums"
+    folder: _albums
+    create: true
+    fields:
+      - { label: Order, name: order, widget: number }
+      - { label: Title, name: title, widget: string }
+      - { label: "Meta text (e.g. date · photo count)", name: meta, widget: string }
+      - { label: "Album URL", name: url, widget: string }
+      - { label: "Thumbnail image", name: thumb, widget: image }

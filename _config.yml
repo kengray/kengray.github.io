@@ -1,0 +1,16 @@
+title: Caledonia
+description: "Ken Gray & Dana Beer's corner of the web"
+url: "https://grayscot.com"
+
+# Bump this on every change, however small. It's shown in every page footer
+# so Ken can tell at a glance whether he's looking at the current version.
+version: "2.7"
+
+collections:
+  whiskies:
+    output: false
+  albums:
+    output: false
+
+# Legacy GitHub Pages build (no custom plugins needed)
+markdown: kramdown
