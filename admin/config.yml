@@ -165,5 +165,5 @@ collections:
       - { label: Order, name: order, widget: number }
       - { label: Title, name: title, widget: string }
       - { label: "Meta text (e.g. date · photo count)", name: meta, widget: string }
-      - { label: "Album URL", name: url, widget: string }
+      - { label: "Album link", name: link, widget: string }
       - { label: "Thumbnail image", name: thumb, widget: image }
