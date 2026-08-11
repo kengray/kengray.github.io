@@ -11,7 +11,7 @@ intro: "A collection of albums from over the years. More to be added as they're 
 <div class="album-grid">
 {% assign albums = site.albums | sort: 'order' %}
 {% for a in albums %}
-  <a href="{{ a.url | relative_url }}" class="album-card">
+  <a href="{{ a.link | relative_url }}" class="album-card">
     <div class="album-thumb">
       <img src="{{ a.thumb | relative_url }}" alt="{{ a.title }}" loading="lazy">
     </div>
