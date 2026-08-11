@@ -78,6 +78,8 @@ collections:
       - file: dana/index.md
         label: "Dana's page"
         name: dana
+        media_folder: "/dana/images"
+        public_folder: "/dana/images"
         fields:
           - { label: Tagline, name: tagline, widget: string }
           - { label: Intro, name: intro, widget: text }
@@ -139,6 +141,8 @@ collections:
     label: Whiskies
     folder: _whiskies
     create: true
+    media_folder: "/images/whisky"
+    public_folder: "/images/whisky"
     fields:
       - { label: Order, name: order, widget: number }
       - { label: Region, name: region, widget: string }
@@ -155,6 +159,8 @@ collections:
     label: "Photo albums"
     folder: _albums
     create: true
+    media_folder: "/photos"
+    public_folder: "/photos"
     fields:
       - { label: Order, name: order, widget: number }
       - { label: Title, name: title, widget: string }
