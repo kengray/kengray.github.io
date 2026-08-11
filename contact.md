@@ -1,11 +1,12 @@
 ---
+heading: Get in Touch
+email: ken.gray@verilab.com
+auto_heading: true
 layout: default
 title: Contact
-heading: Get in Touch
-auto_heading: true
 permalink: /contact.html
-email: ken@grayscot.com
 ---
+
 <div class="prose" markdown="1">
 The best way to reach us is by email. We check it occasionally, which is more than can be said for voicemail.
 </div>
