@@ -1,118 +1,109 @@
 ---
-layout: dana
-permalink: /dana/
-tagline: "piecing quilts, knitting rows, picking tunes"
-intro: "Quilter, crocheter, weaver, occasional spinner, and one half of the harmonies in Sweet Lies and Lullabies. Most of what I make starts the same way: a good pattern, a bit of patience, and someone nearby playing a banjo."
+tagline: piecing quilts, knitting rows, picking tunes
+intro: 'Quilter, crocheter, weaver, occasional spinner, and one half of the harmonies in Sweet Lies and Lullabies. Most of what I make starts the same way: a good pattern, a bit of patience, and someone nearby playing a banjo.'
 bio_photo: /dana/images/ken-dana.jpg
-bio_caption: "Dana & Ken"
-
+bio_caption: Dana & Ken
 craft_groups:
   - name: Quilting
-    text: "I like the slow arithmetic of it: cutting fabric into small honest shapes and sewing them back into something bigger than they were. Most projects are pieced by machine and finished by hand, which means there's always one quilt on the go and one on the frame."
+    text: "I like the slow arithmetic of it: cutting fabric into small honest shapes and sewing them back into something bigger than they were. All projects are pieced and finished by hand, which means there's always one quilt on the go and one on the frame."
     patches:
       - image: /dana/images/crafts/quilt-star.jpg
-        caption: "Star sampler quilt"
+        caption: Star sampler quilt
       - image: /dana/images/crafts/quilt-rwb.jpg
-        caption: "Red, white & blue quilt"
+        caption: Red, white & blue quilt
       - image: /dana/images/crafts/quilt-piecing.jpg
-        caption: "Piecing in progress"
+        caption: Piecing in progress
   - name: Crochet
-    text: "The most portable of the lot - a hook, a ball of yarn, and a granny square grows anywhere: festival fields included. Replace this paragraph with your own take on what draws you to it."
+    text: 'The most portable of the lot - a hook, a ball of yarn, and a granny square grows anywhere: festival fields included. Replace this paragraph with your own take on what draws you to it.'
     patches:
       - image: /dana/images/crafts/crochet-logcabin.jpg
-        caption: "Log cabin blanket"
+        caption: Log cabin blanket
       - image: /dana/images/crafts/crochet-squares.jpg
-        caption: "Granny squares"
+        caption: Granny squares
       - image: /dana/images/crafts/crochet-wip.jpg
-        caption: "Work in progress"
+        caption: Work in progress
       - image: /dana/images/crafts/crochet-vest.jpg
-        caption: "Freeform crochet vest"
+        caption: Freeform crochet vest
       - image: /dana/images/crafts/crochet-cape-worn.jpg
-        caption: "Freeform cape"
+        caption: Freeform cape
       - image: /dana/images/crafts/crochet-cape-detail.jpg
-        caption: "Cape detail"
+        caption: Cape detail
       - image: /dana/images/crafts/crochet-blanket-cat.jpg
-        caption: "Blanket, with supervisor"
+        caption: Blanket, with supervisor
   - name: Weaving
-    text: "Slower again, and unforgiving of mistakes - every thread's committed the moment it's warped onto the loom. Replace this paragraph with the story behind your loom, or your favourite finished piece."
+    text: Slower again, and unforgiving of mistakes - every thread's committed the moment it's warped onto the loom. Replace this paragraph with the story behind your loom, or your favourite finished piece.
     patches:
       - image: /dana/images/crafts/weaving-scarf.jpg
-        caption: "Woven tartan scarf"
+        caption: Woven tartan scarf
       - image: /dana/images/crafts/weaving-loom.jpg
-        caption: "On the loom"
+        caption: On the loom
   - name: Spinning
-    text: "Where the yarn starts, before any of the above. Replace this paragraph with what you spin, and what it tends to become."
+    text: Where the yarn starts, before any of the above. Replace this paragraph with what you spin, and what it tends to become.
     patches:
       - image: /dana/images/crafts/spinning-wheel.jpg
-        caption: "The spinning wheel"
+        caption: The spinning wheel
       - image: /dana/images/crafts/spinning-stash.jpg
-        caption: "Yarn & fibre stash"
-
+        caption: Yarn & fibre stash
 side_projects:
   - image: /dana/images/crafts/violin.jpg
-    alt: "Decoupaged violin, decorated with a floral pattern"
-    text: "Not every project fits neatly into quilting, crochet or weaving - this decoupaged violin is proof. Replace this with the story of how it came about."
+    alt: Decoupaged violin, decorated with a floral pattern
+    text: Not every project fits neatly into quilting, crochet or weaving - this decoupaged violin is proof. Replace this with the story of how it came about.
   - image: /dana/images/crafts/rainbow-bench.jpg
-    alt: "Hand-painted rainbow trim on a garden bench"
-    text: "Furniture gets the same treatment eventually. This bench's trim was hand-painted, stripe by stripe - replace this with the story behind it."
-
-band_name: "Sweet Lies and Lullabies"
+    alt: Hand-painted rainbow trim on a garden bench
+    text: Furniture gets the same treatment eventually. This bench's trim was hand-painted, stripe by stripe - replace this with the story behind it.
+band_name: Sweet Lies and Lullabies
 band_logo: /dana/images/sweet-lies-logo.png
-band_sub: "close harmonies, old tunes, the odd fib"
+band_sub: close harmonies, old tunes, the odd fib
 band_photo: /dana/images/band-photo.jpg
-band_photo_alt: "Dana, Sigi and Ken with Sigi's 1950s car"
-alisa_photo: /dana/images/alisa-performance.jpg
-alisa_photo_alt: "Ken and Dana performing live at Alisa, Geisenfeld"
-alisa_caption: "Live at Alisa, Geisenfeld."
-
-blue_stage_photos:
-  - image: /dana/images/blue-stage.jpg
-    caption: "The stage itself"
-  - image: /dana/images/blue-stage-sign.jpg
-    caption: "The house sign"
-  - image: /dana/images/blue-stage-dana-bass.jpg
-    caption: "Dana, stage side"
-jam_session_photo: /dana/images/jam-session.jpg
-jam_session_caption: "Where most of this actually gets rehearsed - built and decorated by hand, right down to the paintwork."
-
-band_text: "Double bass, mandolin, guitar and blues harp carry the sound - American roots music, played and sung the way it's meant to be. Dana's own songs sit alongside folk, bluegrass, old-time and country numbers, with harmonies and acoustic instruments telling stories about love, betrayal, life and death."
-
+band_text: Double bass, mandolin, guitar and blues harp carry the sound - American roots music, played and sung the way it's meant to be. Dana's own songs sit alongside folk, bluegrass, old-time and country numbers, with harmonies and acoustic instruments telling stories about love, betrayal, life and death.
 lineup:
   - name: Dana Beer
-    role: "voice, guitar, mandolin"
+    role: voice, guitar, mandolin
   - name: Ken Gray
-    role: "voice, guitar"
+    role: voice, guitar
   - name: Sigi Czerner
-    role: "blues harp, tin whistle"
+    role: blues harp, tin whistle
   - name: Alma Honal
-    role: "voice, bass"
-
-listen_note: "Drop in a Bandcamp, Spotify or YouTube embed here once one's live."
-shows_upcoming_note: "Add dates as they're booked, e.g. \"12 Sept - The Fiddler's Rest, Edinburgh\"."
+    role: voice, bass
+listen_note: Drop in a Bandcamp, Spotify or YouTube embed here once one's live.
+shows_upcoming_note: Add dates as they're booked, e.g. "12 Sept - The Fiddler's Rest, Edinburgh".
 shows_past:
-  - when: "Jun-Dec 2025"
-    what: "Bar Alisa, Geisenfeld (Unplugged Sessions 1-7, monthly)"
-  - when: "11 Nov 2025"
-    what: "Neue Welt, Ingolstadt"
-press_text: "Featured in the Mittelbayerische's write-up of Langquaid's Offene Bühne (15 January 2026), which singled the trio out among the evening's highlights for their close harmonies, original songs and warm country-folk sound."
-
-other_projects_text: "Dana and Ken also play Irish and Bavarian pub songs with Bavarian Celtics, alongside Tschak and Christian - a different band, a different sound, same enthusiasm for a good singalong."
+  - when: Jun-Dec 2025
+    what: Bar Alisa, Geisenfeld (Unplugged Sessions 1-7, monthly)
+  - when: 11 Nov 2025
+    what: Neue Welt, Ingolstadt
+press_text: Featured in the Mittelbayerische's write-up of Langquaid's Offene Bühne (15 January 2026), which singled the trio out among the evening's highlights for their close harmonies, original songs and warm country-folk sound.
+other_projects_text: Dana and Ken also play Irish and Bavarian pub songs with Bavarian Celtics, alongside Tschak and Christian - a different band, a different sound, same enthusiasm for a good singalong.
 other_projects_image: /dana/images/bavarian-celtics-poster.jpg
-other_projects_alt: "Bavarian Celtics gig poster, 17 December 2022"
-
-bluegrass_text_1: "I came to bluegrass sideways, through a fiddle tune I couldn't get out of my head and a festival field I didn't want to leave. Every summer now includes a stretch of proper picking, borrowed chairs, and songs that are older than anyone playing them."
-bluegrass_quote: "\"Three chords and the truth, mostly. Occasionally a fourth chord, if someone's feeling ambitious.\""
-bluegrass_text_2: "This is the spot to add your own festival photos, favourite bands you've seen, or a short account of the trips that got you here."
-
-contact_intro: "Commissions, gig enquiries, or just to talk fabric and fiddle tunes."
+bluegrass_text_1: I came to bluegrass sideways, through a fiddle tune I couldn't get out of my head and a festival field I didn't want to leave. Every summer now includes a stretch of proper picking, borrowed chairs, and songs that are older than anyone playing them.
+bluegrass_quote: '"Three chords and the truth, mostly. Occasionally a fourth chord, if someone''s feeling ambitious."'
+bluegrass_text_2: This is the spot to add your own festival photos, favourite bands you've seen, or a short account of the trips that got you here.
+contact_intro: Commissions, gig enquiries, or just to talk fabric and fiddle tunes.
 social_links:
   - label: Email
-    url: "mailto:dana@example.com"
+    url: mailto:dana@example.com
   - label: Instagram
-    url: "#"
+    url: '#'
   - label: Bandcamp
-    url: "#"
+    url: '#'
+other_projects_alt: Bavarian Celtics gig poster, 17 December 2022
+blue_stage_photos:
+  - caption: The stage itself
+    image: /dana/images/blue-stage.jpg
+  - caption: The house sign
+    image: /dana/images/blue-stage-sign.jpg
+  - caption: Dana, stage side
+    image: /dana/images/blue-stage-dana-bass.jpg
+alisa_caption: Live at Alisa, Geisenfeld.
+alisa_photo_alt: Ken and Dana performing live at Alisa, Geisenfeld
+alisa_photo: /dana/images/alisa-performance.jpg
+layout: dana
+permalink: /dana/
+band_photo_alt: Dana, Sigi and Ken with Sigi's 1950s car
+jam_session_photo: /dana/images/jam-session.jpg
+jam_session_caption: Where most of this actually gets rehearsed - built and decorated by hand, right down to the paintwork.
 ---
+
 <section class="hero">
   <span class="tagline">{{ page.tagline }}</span>
   <h1>Dana</h1>
