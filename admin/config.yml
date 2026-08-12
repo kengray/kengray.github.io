@@ -45,6 +45,9 @@ collections:
         label: Test
         name: test
         fields:
+          - { label: Layout, name: layout, widget: hidden, default: "default" }
+          - { label: Permalink, name: permalink, widget: hidden, default: "/test.html" }
+          - { label: "Auto Heading", name: auto_heading, widget: hidden, default: true }
           - { label: Heading, name: heading, widget: string }
           - { label: Body, name: body, widget: markdown }
 
