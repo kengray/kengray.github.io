@@ -17,7 +17,7 @@ cards:
     link: /contact.html
     link_text: Contact us
   - icon: '&#9993;'
-    title: Thisis a test card
+    title: This is a test card
     body: This is a test
     link: /test.html
     link_text: This is a test
