@@ -1,5 +1,5 @@
 ---
-heading: Again a test-page
+heading: Test-Page Header
 email: ken.gray@verilab.com
 ---
 
