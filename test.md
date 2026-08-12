@@ -1,6 +1,8 @@
 ---
+layout: default
+permalink: /test.html
 heading: Test-Page Header
-email: ken.gray@verilab.com
+auto_heading: true
 ---
 
 This is some test-page text
