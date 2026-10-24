@@ -1,10 +1,10 @@
 ---
-heading: Get in Touch
+heading: Get in Touch (Test)
 email: ken.gray@verilab.com
 auto_heading: true
 layout: default
-title: Contact
 permalink: /contact.html
+title: Contact
 ---
 
 <div class="prose" markdown="1">
