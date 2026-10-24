@@ -1,5 +1,5 @@
 ---
-heading: Get in Touch (Test)
+heading: Get in Touch
 email: ken.gray@verilab.com
 auto_heading: true
 layout: default
